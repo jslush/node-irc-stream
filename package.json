@@ -1,0 +1,22 @@
+{
+	"name": "irc-stream",
+	"preferGlobal": "false",
+	"version": "0.0.0",
+	"author": "jslush team <jslush.org@gmail.com>",
+	"description": "A streaming IRC client library inspired by node-irc",
+	"contributors": [
+		{	"name": "Vesa \"VesQ\" Laakso",
+			"email": "laakso.vesa@gmail.com" },
+		{ "name": "Ville \"tuhoojabotti\" Lahdenvuo",
+			"email": "tuhoojabotti@gmail.com" }
+	],
+	"main": "./lib/irc-stream.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jslush/node-irc-stream.git"
+	},
+	"keywords": ["irc", "stream", "irkki", "client"],
+	"depencies": {},
+	"license": "MIT",
+	"engines": { "node": ">=0.8" }
+}
