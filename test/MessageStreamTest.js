@@ -3,7 +3,6 @@
 var MessageStream = require('../lib/message')
   , assert = require('assert');
 
-
 module.exports = {
   'A Message': {
     topic: function () {
