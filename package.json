@@ -16,10 +16,10 @@
     "url": "https://github.com/jslush/node-irc-stream.git"
   },
   "keywords": ["irc", "stream", "irkki", "client"],
-  "depencies": {
+  "dependencies": {
     "event-stream": "3.0.x"
   },
-  "devDepencies": {
+  "devDependencies": {
     "vows": "0.6.x"
   },
   "scripts": {
