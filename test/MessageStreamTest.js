@@ -5,7 +5,7 @@ var MessageStream = require('../lib/message')
 
 
 module.exports = {
-  "A Message": {
+  'A Message': {
     topic: function () {
       var server = {
         msgs: [],
