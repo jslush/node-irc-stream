@@ -1,7 +1,8 @@
 'use strict';
 
 var parser = require('../lib/parser')
-  , assert = require('assert');
+  , assert = require('assert')
+  , crypto = require('crypto');
 
 module.exports = {
   'A Parser': {
@@ -24,6 +25,18 @@ module.exports = {
           args: [ 'streamBot1337',
                   'Welcome to the freenode Internet Relay Chat Network streamBot1337' ]
         });
+      }
+    },
+    'parsing random message': {
+      topic: function (parser) {
+        var cb = this.callback;
+        parser.once('data', function () {
+          cb(null);
+        });
+        parser.write(crypto.randomBytes(256).toString() + '\r\n');
+      },
+      'does not crash': function () {
+        assert.ok(true);
       }
     }
   }
