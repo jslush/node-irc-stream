@@ -1,13 +1,14 @@
 'use strict';
 
-var vows = require('vows');
+var vows = require('vows')
+  , async = require('async');
 
-vows
-  .describe('MessageStream Test')
-  .addBatch(require('./MessageStreamTest'))
-.run();
+var tests = [
+  vows.describe('MessageStream Test').addBatch(require('./MessageStreamTest')),
+  vows.describe('Parser Test').addBatch(require('./ParserTest')),
+  vows.describe('JSHint Test').addBatch(require('./JSHintTest'))
+];
 
-vows
-  .describe('Parser Test')
-  .addBatch(require('./ParserTest'))
-.run();
+async.forEachSeries(tests, function (test, cb) {
+  test.run({}, function () { cb(null); });
+});
