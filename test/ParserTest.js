@@ -1,6 +1,6 @@
 'use strict';
 
-var parser = require('../lib/parser')
+var parser = require('../lib/middleware/parser')
   , assert = require('assert')
   , crypto = require('crypto');
 

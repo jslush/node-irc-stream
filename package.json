@@ -20,7 +20,10 @@
     "event-stream": "3.0.x"
   },
   "devDependencies": {
-    "vows": "0.6.x"
+    "vows": "0.6.x",
+    "jshint": "0.9.x",
+    "cjson": "0.2.x",
+    "async": "0.1.x"
   },
   "scripts": {
     "test": "node test/index.js"
