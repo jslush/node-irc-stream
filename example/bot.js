@@ -5,7 +5,7 @@ var irc = require('..');
 var client = new irc()
   .set('nick', 'streamBot1337')
   .set('address', 'irc.freenode.org')
-  .output('logger', {colors: true})
+  .output('log', {colors: true})
   .input('floodprotection', {interval: 2000, maxFlood: 3})
   .connect(function () {
     client.join('#jslush', function (ch) {
