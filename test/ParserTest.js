@@ -29,14 +29,14 @@ module.exports = {
     },
     'parsing random message': {
       topic: function (parser) {
-        var cb = this.callback;
-        parser.once('data', function () {
-          cb(null);
-        });
-        parser.write(crypto.randomBytes(256).toString() + '\r\n');
+        return function () {
+          for (var i = 999; i >= 0; i--) {
+            parser.write(crypto.randomBytes(256).toString() + '\r\n');
+          }
+        };
       },
-      'does not crash': function () {
-        assert.ok(true);
+      'crashes cleanly': function (f) {
+        assert.throws(f, TypeError);
       }
     }
   }

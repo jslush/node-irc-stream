@@ -10,5 +10,5 @@ var tests = [
 ];
 
 async.forEachSeries(tests, function (test, cb) {
-  test.run({}, function () { cb(null); });
+  test.run(null, function () { cb(null); });
 });
