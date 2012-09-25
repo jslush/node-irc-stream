@@ -7,6 +7,7 @@ var client = new irc()
   .set('address', 'irc.freenode.org')
   .output('log', {colors: true})
   .input('floodprotection', {interval: 2000, maxFlood: 3})
+  .use('exceptions')
   .connect(function () {
     client.join('#jslush', function (ch) {
       ch.write('hi!');
