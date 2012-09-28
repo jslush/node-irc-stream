@@ -21,7 +21,7 @@ module.exports = {
         message.once('data', function (data) {
           cb(null, data);
         });
-        message.handleMessage('test message');
+        message.receive('test message');
       },
       'handles test message': function (data) {
         assert.equal(data, 'test message');
