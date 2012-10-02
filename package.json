@@ -1,7 +1,7 @@
 {
   "name": "irc-stream",
   "preferGlobal": "false",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "jslush team <jslush.org@gmail.com>",
   "description": "A streaming IRC client library inspired by node-irc",
   "contributors": [
