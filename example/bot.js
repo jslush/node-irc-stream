@@ -7,7 +7,7 @@ var client = new irc()
   .set('address', 'irc.freenode.org')
   .use('logger')
   .use('exception-handler')
-  .input('floodprotection', {interval: 2000, maxFlood: 3})
+  .input('flood-protection', {interval: 2000, maxFlood: 3})
   .use('message-stream')
   .connect(function () {
     client.join('#jslush', function (ch) {
