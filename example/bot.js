@@ -25,19 +25,12 @@ var client = new irc()
       process.stdin.pipe(ch)
         .pipe(formatter)
         .pipe(process.stdout);
+
+      ch.on('names', function () {
+        console.log('Users ' + ch.name);
+        console.log(Object.keys(ch.names).map(function (name) {
+          return ch.names[name] + name;
+        }).join('\n'));
+      });
     });
   });
-
-/* You can also use events instead of callbacks:
-client.on('connected', function () {
-  client.join('#jslush');
-
-  client.on('joined#jslush', function (ch) {
-    ch.write('hi!');
-
-    process.stdin.pipe(ch)
-      .pipe(formatter)
-      .pipe(process.stdout);
-  });
-});
-*/
