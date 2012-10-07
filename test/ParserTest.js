@@ -1,10 +1,11 @@
 'use strict';
 
-var parser = require('../lib/middleware/parser')
+var vows = require('vows')
+  , parser = require('../lib/middleware/parser')
   , assert = require('assert')
   , crypto = require('crypto');
 
-module.exports = {
+vows.describe('Parser Test').addBatch({
   'A Parser': {
     topic: parser,
     'parsing 001 message': {
@@ -40,4 +41,4 @@ module.exports = {
       }
     }
   }
-};
+}).exportTo(module);
