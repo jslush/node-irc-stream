@@ -2,3 +2,10 @@ language: node_js
 node_js:
   - 0.8
   - 0.9
+
+notifications:
+  email: false
+  irc:
+    channels:
+      - "irc.freenode.org#jslush"
+      - "ircnet.choopa.net#jslush"
