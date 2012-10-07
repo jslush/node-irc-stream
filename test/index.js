@@ -6,6 +6,7 @@ var vows = require('vows')
 var tests = [
   //vows.describe('MessageStream Test').addBatch(require('./MessageStreamTest')),
   vows.describe('Parser Test').addBatch(require('./ParserTest')),
+  vows.describe('Load middleware Test').addBatch(require('./LoadMiddlewareTest')),
   vows.describe('JSHint Test').addBatch(require('./JSHintTest'))
 ];
 
