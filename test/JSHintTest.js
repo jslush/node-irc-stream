@@ -1,6 +1,7 @@
 'use strict';
 
-var assert = require('assert')
+var vows = require('vows')
+  , assert = require('assert')
   , jshint = require('jshint').JSHINT
   , fs = require('fs')
   , cjson = require('cjson')
@@ -14,7 +15,7 @@ function mapFilterJoin(a, f) {
 
 // Returns a formatter function that formats hints for a specific file.
 function hintFormatter(file) {
-  return function(i) {
+  return function (i) {
     return util.format('%s on line %d:%d - %s', file, i.line, i.character, i.reason);
   };
 }
@@ -38,11 +39,11 @@ function hint(folder) {
 }
 
 
-module.exports = {
+vows.describe('Linting').addBatch({
   'JSHint': {
     topic: function () {
       // Hint the js files in the following folders.
-      var folders = ['lib', 'lib/middleware']
+      var folders = ['lib', 'lib/middleware', 'test']
         , errors = mapFilterJoin(folders, hint);
       return errors;
     },
@@ -50,4 +51,4 @@ module.exports = {
       assert.equal(errors, '');
     }
   }
-};
+}).exportTo(module);
