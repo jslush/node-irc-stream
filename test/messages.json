@@ -1,0 +1,35 @@
+{
+  "001 message": [
+    ":lindbohm.freenode.net 001 streamBot1337 :Welcome to the freenode Internet Relay Chat Network streamBot1337",
+    { "prefix": "lindbohm.freenode.net"
+    , "server": "lindbohm.freenode.net"
+    , "command": "001"
+    , "rawCommand": "001"
+    , "commandType": "normal"
+    , "args": [ "streamBot1337",
+              "Welcome to the freenode Internet Relay Chat Network streamBot1337" ] }
+  ],
+  "005 message": [
+    ":lindbohm.freenode.net 005 streamBot CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQcgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server",
+    { "prefix": "lindbohm.freenode.net"
+    , "server": "lindbohm.freenode.net"
+    , "command": "005"
+    , "rawCommand": "005"
+    , "commandType": "normal"
+    , "args":
+    [ "streamBot"
+    , "CHANTYPES=#"
+    , "EXCEPTS"
+    , "INVEX"
+    , "CHANMODES=eIbq,k,flj,CFLMPQcgimnprstz"
+    , "CHANLIMIT=#:120"
+    , "PREFIX=(ov)@+"
+    , "MAXLIST=bqeI:100"
+    , "MODES=4"
+    , "NETWORK=freenode"
+    , "KNOCK"
+    , "STATUSMSG=@+"
+    , "CALLERID=g"
+    , "are supported by this server" ] }
+  ]
+}
