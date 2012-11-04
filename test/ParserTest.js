@@ -32,12 +32,20 @@ vows.describe('Parser Test').addBatch({
       topic: function (parser) {
         return function () {
           for (var i = 999; i >= 0; i--) {
-            parser.write(crypto.randomBytes(256).toString() + '\r\n');
+            try {
+              parser.write(crypto.randomBytes(256).toString() + '\r\n');
+            } catch (e) {
+              // We only want TypeErrors, so anything else will fail.
+              if (!(e instanceof TypeError)) {
+                return e;
+              }
+            }
           }
+          return true;
         };
       },
       'crashes cleanly': function (f) {
-        assert.throws(f, TypeError);
+        assert.isTrue(f());
       }
     }
   }

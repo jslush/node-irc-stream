@@ -7,8 +7,11 @@ var vows = require('vows')
 vows.describe('Testing middleware loading').addBatch({
   'An IRC Client': {
     topic: IRC(),
-    'Can load CTCP middleware': function (client) {
+    'Can load default ctcp middleware': function (client) {
       assert.doesNotThrow(function () { client.use('ctcp'); });
+    },
+    'Can load optional logger middleware': function (client) {
+      assert.doesNotThrow(function () { client.use('logger'); });
     },
     'Cannot load middleware with directory separators': function (client) {
       assert.throws(function () { client.use('../middleware/ctcp'); });
