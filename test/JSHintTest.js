@@ -38,8 +38,7 @@ function hint(folder) {
   return errors;
 }
 
-
-vows.describe('Linting').addBatch({
+vows.describe('Testing code quality').addBatch({
   'JSHint': {
     topic: function () {
       // Hint the js files in the following folders.
@@ -47,7 +46,7 @@ vows.describe('Linting').addBatch({
         , errors = mapFilterJoin(folders, hint);
       return errors;
     },
-    'conforms': function (errors) {
+    'Conforms': function (errors) {
       assert.equal(errors, '');
     }
   }

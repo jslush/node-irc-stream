@@ -13,10 +13,10 @@ vows.describe('Testing middleware loading').addBatch({
     'Can load optional logger middleware': function (client) {
       assert.doesNotThrow(function () { client.use('logger'); });
     },
-    'Cannot load middleware with directory separators': function (client) {
+    'Can\'t load middleware with invalid name': function (client) {
       assert.throws(function () { client.use('../middleware/ctcp'); });
     },
-    'Cannot load unexisting middlewares': function (client) {
+    'Can\'t load unexisting middleware': function (client) {
       assert.throws(function () { client.use('unexisting-middleware'); });
     }
   }

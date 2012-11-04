@@ -31,7 +31,7 @@ function parseMessages() {
   return suite;
 }
 
-vows.describe('Parser Test')
+vows.describe('Testing parser')
   // Tests each message in the messages object.
   .addBatch({ 'A parser': parseMessages() })
   // Tests fuzzy random data for exceptions.
