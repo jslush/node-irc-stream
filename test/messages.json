@@ -31,5 +31,16 @@
     , "STATUSMSG=@+"
     , "CALLERID=g"
     , "are supported by this server" ] }
+  ],
+  "PRIVMSG with a colon": [
+    ":tuhoojabotti!tuhoojabot@irkin.tuhoojabotti.com PRIVMSG #jslush :hello x2 :)",
+    { "prefix": "tuhoojabotti!tuhoojabot@irkin.tuhoojabotti.com"
+    , "nick": "tuhoojabotti"
+    , "user": "tuhoojabot"
+    , "host": "irkin.tuhoojabotti.com"
+    , "command": "PRIVMSG"
+    , "rawCommand": "PRIVMSG"
+    , "commandType": "normal"
+    , "args": [ "#jslush", "hello x2 :)" ] }
   ]
 }
