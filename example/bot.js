@@ -13,7 +13,7 @@ var formatter = es.mapSync(function (o) {
     f(o.timestamp.getHours()), f(o.timestamp.getMinutes()), o.to, o.nick, o.text);
 });
 
-var client = new irc()
+var client = irc()
   .set('nick', 'streamBot')
   .set('address', 'irc.freenode.org')
   .use('logger')
