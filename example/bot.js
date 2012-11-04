@@ -17,7 +17,6 @@ var client = irc()
   .set('nick', 'streamBot')
   .set('address', 'irc.freenode.org')
   .use('logger')
-  .use('ctcp')
   .connect(function () {
     client.join('#jslush', function (ch) {
       ch.write('hi!');

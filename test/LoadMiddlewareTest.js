@@ -6,7 +6,7 @@ var vows = require('vows')
 
 vows.describe('Testing middleware loading').addBatch({
   'An IRC Client': {
-    topic: new IRC(),
+    topic: IRC(),
     'Can load CTCP middleware': function (client) {
       assert.doesNotThrow(function () { client.use('ctcp'); });
     },
