@@ -37,7 +37,8 @@ vows.describe('Testing parser')
   // Tests fuzzy random data for exceptions.
   .addBatch({ 'A parser': {
     'parsing random message': {
-      topic: function (parser) {
+      topic: function () {
+        var parser = Parser();
         for (var i = 999; i >= 0; i--) {
           try { parser.write(crypto.randomBytes(256).toString() + '\r\n'); }
           catch (e) { // We only want TypeErrors, so anything else will fail.
