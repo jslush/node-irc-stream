@@ -16,6 +16,7 @@ function mapFilterJoin(a, f) {
 // Returns a formatter function that formats hints for a specific file.
 function hintFormatter(file) {
   return function (i) {
+    if (!i) { return; }
     return util.format('%s on line %d:%d - %s', file, i.line, i.character, i.reason);
   };
 }
