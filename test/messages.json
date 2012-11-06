@@ -9,13 +9,13 @@
     , "args": [ "streamBot1337",
               "Welcome to the freenode Internet Relay Chat Network streamBot1337" ] }
   ],
-  "005 message": [
+  "rpl_isupport message": [
     ":lindbohm.freenode.net 005 streamBot CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQcgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server",
     { "prefix": "lindbohm.freenode.net"
     , "server": "lindbohm.freenode.net"
-    , "command": "005"
+    , "command": "rpl_isupport"
     , "rawCommand": "005"
-    , "commandType": "normal"
+    , "commandType": "reply"
     , "args":
     [ "streamBot"
     , "CHANTYPES=#"
