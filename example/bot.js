@@ -15,7 +15,7 @@ var formatter = es.mapSync(function (o) {
 
 var client = irc()
   .set('nick', 'streamBot')
-  .set('address', 'irc.freenode.org')
+  .set('address', 'irc.cc.tut.fi')
   .use('logger')
   .connect(function () {
     client.join('#jslush', function (ch) {

@@ -42,5 +42,27 @@
     , "rawCommand": "PRIVMSG"
     , "commandType": "normal"
     , "args": [ "#jslush", "hello x2 :)" ] }
+  ],
+  "IRCNet JOIN": [
+   ":streamBot!~nodejs@a450-83-150-118-97.nebulazone.fi JOIN :#jslush",
+    { "prefix": "streamBot!~nodejs@a450-83-150-118-97.nebulazone.fi"
+    , "nick": "streamBot"
+    , "user": "~nodejs"
+    , "host": "a450-83-150-118-97.nebulazone.fi"
+    , "command": "JOIN"
+    , "rawCommand": "JOIN"
+    , "commandType": "normal"
+    , "args": [ "#jslush" ] }
+  ],
+  "Freenode JOIN": [
+   ":streamBot!~nodejs@a450-83-150-118-97.nebulazone.fi JOIN #jslush",
+    { "prefix": "streamBot!~nodejs@a450-83-150-118-97.nebulazone.fi"
+    , "nick": "streamBot"
+    , "user": "~nodejs"
+    , "host": "a450-83-150-118-97.nebulazone.fi"
+    , "command": "JOIN"
+    , "rawCommand": "JOIN"
+    , "commandType": "normal"
+    , "args": [ "#jslush" ] }
   ]
 }
