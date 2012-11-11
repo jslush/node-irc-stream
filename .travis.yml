@@ -8,4 +8,3 @@ notifications:
   irc:
     channels:
       - "irc.freenode.org#jslush"
-      - "ircnet.choopa.net#jslush"
