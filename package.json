@@ -17,15 +17,15 @@
   },
   "keywords": ["irc", "stream", "irkki", "client"],
   "dependencies": {
+    "cjson": "0.2.x"
   },
   "devDependencies": {
     "mocha": "1.8.x",
     "jshint": "1.1.x",
-    "cjson": "0.2.x",
     "async": "0.2.x"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha -R spec"
   },
   "license": "MIT",
   "engines": { "node": ">=0.10" }
