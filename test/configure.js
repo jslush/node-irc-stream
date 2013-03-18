@@ -6,7 +6,7 @@ var irc = require('..')
 describe('Configure', function () {
   var client = irc('./test/irc-options.json');
 
-  it('loads json', function () {
+  it('Loads JSON properly', function () {
     // Test default options.
     assert.equal(client.config.name, 'node-irc-stream');
     assert.equal(client.config.user, 'nodejs');
@@ -15,7 +15,7 @@ describe('Configure', function () {
     assert.equal(client.config.nick, 'tuhBot');
   });
 
-  it('allows modifying', function () {
+  it('Allows modifying settings', function () {
     // Test set
     client.set('port', 6667);
     assert.equal(client.config.port, 6667);      

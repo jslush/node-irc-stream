@@ -43,8 +43,8 @@ function hint(folder) {
 }
 
 describe('Code quality', function () {
-  it('conforms JSHint', function () {
+  it('Conforms to JSHint', function () {
     assert.equal(mapFilterJoin(
-      ['lib', 'lib/middleware', 'test'], hint), '');
+      ['lib', 'lib/middleware', 'test', 'test/middleware'], hint), '');
   });
 });
